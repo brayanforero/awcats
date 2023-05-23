@@ -29,4 +29,15 @@ export class BreedService {
       }
     );
   }
+
+  getRandomImage(): Observable<ImagesResponse> {
+    return this.breedSvc.get<ImagesResponse>(
+      `${this.apiURL}/images/search?mime_types=jpg&size=large`,
+      {
+        headers: {
+          'x-api-key': this.apiKEY,
+        },
+      }
+    );
+  }
 }
