@@ -1,5 +1,5 @@
 export type BreedsReponse = BreedReponse[];
-
+export type ImagesResponse = ImageResponse[];
 export interface BreedReponse {
   weight: Weight;
   id: string;
@@ -43,6 +43,13 @@ export interface BreedReponse {
   image: {
     url: string;
   };
+}
+
+export interface ImageResponse {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
 }
 
 interface Weight {

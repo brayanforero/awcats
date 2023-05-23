@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BreedReponse } from '@core/types';
+import { BreedReponse, ImageResponse } from '@core/types';
 import { BreedService } from '@shared/services/breed.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BreedService } from '@shared/services/breed.service';
 })
 export class BreedDetailComponent implements OnInit {
   breed: BreedReponse | null = null;
-  images: any[] = [];
+  images: ImageResponse[] = [];
   constructor(private router: ActivatedRoute, private breedSvc: BreedService) {}
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class BreedDetailComponent implements OnInit {
     });
 
     this.breedSvc.getImagesByBreed(id).subscribe((d) => {
-      this.images = d as any[];
+      this.images = d;
     });
   }
 }

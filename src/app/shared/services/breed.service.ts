@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BreedsReponse } from '@core/types';
+import { BreedsReponse, ImagesResponse } from '@core/types';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -19,8 +19,8 @@ export class BreedService {
     return this.breedSvc.get(`${this.apiURL}/breeds/${id}`);
   }
 
-  getImagesByBreed(id: string) {
-    return this.breedSvc.get(
+  getImagesByBreed(id: string): Observable<ImagesResponse> {
+    return this.breedSvc.get<ImagesResponse>(
       `${this.apiURL}/images/search?breed_ids=${id}&mime_types=jpg&size=small&limit=16&`,
       {
         headers: {
