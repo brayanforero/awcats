@@ -13,14 +13,11 @@ export class BreedsComponent implements OnInit {
   constructor(private breedSvc: BreedService) {}
   ngOnInit(): void {
     const cacheBreeds = localStorage.getItem('breeds');
-
     if (cacheBreeds != null) {
       this.breeds = JSON.parse(cacheBreeds) as BreedsReponse;
       this.loading = false;
-
       return;
     }
-
     this.loadBreeds();
   }
 
