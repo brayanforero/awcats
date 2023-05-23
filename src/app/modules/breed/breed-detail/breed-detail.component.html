@@ -1,7 +1,7 @@
-<section class="grid grid-cols-12 gap-5">
-  <div class="col-span-6 overflow-hidden rounded-lg shadow-lg">
+<section class="breed-detail">
+  <div class="breed-detail__card">
     <img
-      class="object-cover w-full h-full bg-green-300"
+      class="breed-detail__cover"
       [src]="
         'https://cdn2.thecatapi.com/images/' +
         breed?.reference_image_id +
@@ -11,7 +11,7 @@
     />
   </div>
   <div class="col-span-6">
-    <h1 class="mb-5 text-2xl font-semibold text-green-300">
+    <h1 class="breed-detail__title">
       {{ breed?.name }}
     </h1>
     <p class="mb-4">{{ breed?.description }}</p>

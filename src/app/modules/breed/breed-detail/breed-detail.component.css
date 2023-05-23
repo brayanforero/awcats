@@ -1,0 +1,15 @@
+.breed-detail {
+  @apply grid grid-cols-12 gap-5
+}
+
+.breed-detail__card {
+  @apply col-span-6 overflow-hidden rounded-lg shadow-lg
+}
+
+.breed-detail__cover {
+  @apply object-cover w-full h-full bg-green-300
+}
+
+.breed-detail__title {
+  @apply mb-5 text-2xl font-semibold text-green-300
+}
