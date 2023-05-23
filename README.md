@@ -23,3 +23,5 @@ If you want to run this application in local, follow the steps:
 - Clone this projects `git clone https://github.com/brayanforero/awcats.git`
 
 - Install dependencies `npm install or pnpm install or yarn install`
+
+- Run serve `npm start o ng serve`
