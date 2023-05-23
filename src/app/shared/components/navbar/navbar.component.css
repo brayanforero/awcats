@@ -1,0 +1,23 @@
+.header {
+  @apply h-16;
+}
+
+.header__nav {
+  @apply container flex items-center h-full px-8 mx-auto;
+}
+
+.header__logo {
+  @apply text-xl font-semibold;
+}
+
+.header__menu {
+  @apply flex items-center gap-4 ml-auto;
+}
+
+.header__link {
+  @apply text-lg;
+}
+
+.header__link.link--active {
+  @apply text-orange-300;
+}

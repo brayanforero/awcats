@@ -1,0 +1,54 @@
+<section class="grid grid-cols-12 gap-5">
+  <div class="col-span-6 overflow-hidden rounded-lg shadow-lg">
+    <img
+      class="object-cover w-full h-full bg-green-300"
+      [src]="
+        'https://cdn2.thecatapi.com/images/' +
+        breed?.reference_image_id +
+        '.jpg'
+      "
+      [alt]="breed?.name"
+    />
+  </div>
+  <div class="col-span-6">
+    <h1 class="mb-5 text-2xl font-semibold text-green-300">
+      {{ breed?.name }}
+    </h1>
+    <p class="mb-4">{{ breed?.description }}</p>
+    <p class="mb-3 font-semibold text-gray-500">
+      Weight:
+      <span class="text-green-300"> {{ breed?.weight?.imperial }} cm </span>
+    </p>
+    <p class="mb-3 font-semibold text-gray-500">
+      Life span:
+      <span class="text-green-300"> {{ breed?.life_span }} -years </span>
+    </p>
+    <p class="mb-3 font-semibold text-gray-500">
+      Temperament: <span class="text-green-300">{{ breed?.temperament }}</span>
+    </p>
+    <p class="mb-4 font-semibold text-gray-500">
+      Origin: <span class="text-green-300">{{ breed?.origin }}</span>
+    </p>
+
+    <a
+      target="_blank"
+      [href]="breed?.wikipedia_url"
+      class="px-4 py-3 font-semibold text-green-300 transition-all bg-transparent border-2 border-green-300 rounded-lg shadow-lg hover:bg-green-300 hover:border-green-400 hover:text-gray-50"
+      >Wiki</a
+    >
+  </div>
+</section>
+
+<section class="py-8">
+  <h2 class="mb-5 text-xl font-semibold text-gray-400">Gallery</h2>
+  <div class="grid grid-cols-2 gap-5 xl:grid-cols-4">
+    <img
+      *ngFor="let image of images"
+      class="object-cover bg-green-300 rounded-lg shadow-lg aspect-video"
+      [src]="image.url"
+      [alt]="breed?.name"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</section>

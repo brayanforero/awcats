@@ -1,0 +1,19 @@
+.home {
+  @apply flex justify-center h-full;
+}
+
+.home__feed {
+  @apply flex items-center gap-5
+}
+
+.home__cover {
+  @apply object-cover bg-green-300 aspect-video rounded-lg shadow-lg max-w-lg xl:max-w-2xl
+}
+
+.home__title {
+  @apply mb-5 text-3xl xl:text-4xl font-semibold text-gray-600
+}
+
+.home--container {
+  @apply max-w-[1000px] mx-auto
+}

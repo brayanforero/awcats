@@ -1,0 +1,14 @@
+<article class="pill">
+  <img
+    class="pill__cover"
+    decoding="async"
+    loading="lazy"
+    [src]="'https://cdn2.thecatapi.com/images/' + cover + '.jpg'"
+    [alt]="coverLabel"
+  />
+  <a [routerLink]="['/breeds', key]" routerLinkActive="router-link-active">
+    <span class="pill__label">
+      <ng-content></ng-content>
+    </span>
+  </a>
+</article>

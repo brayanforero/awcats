@@ -1,0 +1,14 @@
+<section class="breeds">
+  <h1 class="breeds__title">Breeds of the world</h1>
+  <span class="font-semibold text-green-300" *ngIf="loading">loading...</span>
+  <div class="breeds__list">
+    <app-breed-pill
+      [cover]="cat.reference_image_id ?? ''"
+      [coverLabel]="cat.name"
+      [key]="cat.id"
+      *ngFor="let cat of breeds"
+    >
+      {{ cat.name }}
+    </app-breed-pill>
+  </div>
+</section>
