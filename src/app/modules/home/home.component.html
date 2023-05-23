@@ -6,13 +6,19 @@
         <p class="mb-8 xl:text-xl">Explore and know all breeds about cats</p>
         <a
           routerLink="/breeds"
-          class="block max-w-xs px-4 py-3 mx-auto font-semibold text-center transition-shadow bg-green-300 rounded-lg hover:shadow-lg text-gray-100 xl:text-xl"
+          class="block max-w-xs px-4 py-3 mx-auto font-semibold text-center text-gray-100 transition-shadow bg-green-300 rounded-lg hover:shadow-lg xl:text-xl"
           >Explore</a
         >
       </div>
+
+      <div
+        *ngIf="loading"
+        class="min-w-[32rem] animate-pulse xl-min-h-[42rem] bg-green-300 aspect-video rounded-lg shadow-lg"
+      ></div>
       <img
+        *ngIf="currentImage"
         class="home__cover"
-        src="https://cdn2.thecatapi.com/images/BQMSld0A0.jpg"
+        [src]="currentImage.url"
         alt="Image on the cats on the poster"
       />
     </div>
